@@ -12,32 +12,51 @@ const Header: FC = () => {
       <nav className="flex items-center">
         <ul className="flex">
           <li className="text-white pr-6">
-            <a href="/" className="uppercase tracking-wider  font-semibold">
+            <a
+              href="/"
+              className="uppercase tracking-wider  font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
+            >
               <span className="text-green pr-1">01.</span>Home
             </a>
           </li>
           <li className="text-white pr-6">
-            <a href="/" className="uppercase tracking-wider font-semibold">
+            <a
+              href="/"
+              className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
+            >
               <span className="text-green pr-1">02.</span>About
             </a>
           </li>
           <li className="text-white pr-6">
-            <a href="/" className="uppercase tracking-wider font-semibold">
+            <a
+              href="/"
+              className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
+            >
               <span className="text-green pr-1">03.</span>Experience
             </a>
           </li>
           <li className="text-white pr-6">
-            <a href="/" className="uppercase tracking-wider font-semibold">
-              <span className="text-green pr-1">04.</span>Projects
+            <a
+              href="/"
+              className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
+            >
+              <span className="text-green pr-1">04.</span>
+              Projects
             </a>
           </li>
           <li className="text-white pr-6">
-            <a href="/" className="uppercase tracking-wider font-semibold">
+            <a
+              href="/"
+              className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
+            >
               <span className="text-green pr-1">05.</span>Blog
             </a>
           </li>
           <li className="text-white">
-            <a href="/" className="uppercase tracking-wider font-semibold">
+            <a
+              href="/"
+              className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
+            >
               <span className="text-green pr-1">06.</span>Contact
             </a>
           </li>
