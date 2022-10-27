@@ -9,7 +9,7 @@ const Header: FC = () => {
           Michałek<span className="text-white">.</span>
         </h1>
       </a>
-      <nav className="flex items-center">
+      <nav className="hidden lg:flex items-center">
         <ul className="flex">
           <li className="text-white pr-6">
             <a
@@ -44,20 +44,12 @@ const Header: FC = () => {
               Projects
             </a>
           </li>
-          <li className="text-white pr-6">
-            <a
-              href="/"
-              className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
-            >
-              <span className="text-green pr-1">05.</span>Blog
-            </a>
-          </li>
           <li className="text-white">
             <a
               href="/"
               className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
             >
-              <span className="text-green pr-1">06.</span>Contact
+              <span className="text-green pr-1">05.</span>Contact
             </a>
           </li>
         </ul>
