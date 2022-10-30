@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 const Header: FC = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <header className="fixed right-2/4 translate-x-2/4 container flex items-center justify-between mx-auto p-5">
+    <header className="fixed right-2/4 translate-x-2/4 container flex items-center justify-between mx-auto p-5 z-20">
       <a href="/">
         <h1 className="text-2xl sm:text-4xl lg:text-5xl text-green font-bold uppercase">
           Michałek<span className="text-white">.</span>

@@ -8,15 +8,24 @@ import {
 const Socials: FC = () => {
   return (
     <div className="flex gap-x-6">
-      <div className="p-3 text-gray border-2 border-green rounded text-xl">
+      <a
+        href="/"
+        className="p-2 text-gray border-2 border-green rounded-full text-xl hover:border-gray hover:text-green delay-100"
+      >
         <RiFacebookFill />
-      </div>
-      <div className="p-3 text-gray border-2 border-green rounded text-xl">
+      </a>
+      <a
+        href="https://github.com/Sh4ke96"
+        className="p-2 text-gray border-2 border-green rounded-full text-xl hover:border-gray hover:text-green delay-100"
+      >
         <RiGithubFill />
-      </div>
-      <div className="p-3 text-gray border-2 border-green rounded text-xl">
+      </a>
+      <a
+        href="https://www.linkedin.com/in/artur-micha%C5%82ek-69863918b/"
+        className="p-2 text-gray border-2 border-green rounded-full text-xl hover:border-gray hover:text-green delay-100"
+      >
         <RiLinkedinBoxFill />
-      </div>
+      </a>
     </div>
   );
 };
