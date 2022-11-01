@@ -2,10 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Radio Canada', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Radio Canada", sans-serif;
+  color: #ffffff;
+}
+
+/* GLOBAL ELEMENTS */
+
+.styledList{
+  list-style-type: none;
+  padding-left: 0;
+}
+.styledList li {
+  position: relative;
+  margin-bottom: .25rem;
+  padding-left: 1.5rem;
+}
+.styledList li::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: #72e2ae;
+}
+
+/* ANIMATIONS */
+
+.animate-leftToRight {
+  animation: titleDeviderAnimation 3s ease-in-out infinite;
+}
+@keyframes titleDeviderAnimation {
+  0% {
+    transform: translateX(-6px);
+  }
+  to {
+    transform: translateX(128px);
+  }
 }

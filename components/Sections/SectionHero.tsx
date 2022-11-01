@@ -5,7 +5,7 @@ import { RiArrowDownLine } from "react-icons/ri";
 const SectionHero: FC = () => {
   return (
     <section className="container mx-auto flex flex-col items-center justify-center h-screen p-5 z-20">
-      <div className="w-full min-h-full flex flex-col items-center justify-center md:w-3/4">
+      <div className="w-full min-h-full flex flex-col items-center justify-center md:w-2/4">
         <div className="border-4 rounded-full border-green w-32 h-32 mb-8"></div>
         <h1 className="text-white text-5xl font-bold mb-5 text-center">
           Hi, I am <span className="text-green">Artur Michałek</span>
