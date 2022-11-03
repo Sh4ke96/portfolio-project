@@ -8,8 +8,12 @@ const SectionAbout: FC = () => {
       <Heading title="about me" />
       <div className="grid grid-cols-2 items-center gap-7">
         <div className="col-span-2 lg:col-span-1">
-          <div className="about-image">
-            <div className="border-8 border-green rounded-lg">
+          <div className="about-image relative overflow-hidden">
+            <div className="border-10 border-green border-opacity-20 rounded-lg">
+              <span className="absolute -top-0 left-0 z-10 h-2 w-10 animate-ledgerLeftRight rounded-full bg-green"></span>
+              <span className="absolute top-auto left-auto bottom-0 z-10 h-2 w-10 animate-ledgerRightLeft rounded-full bg-green"></span>
+              <span className="absolute rotate-90 top-auto bottom-0 -left-4 z-10 h-2 w-10 animate-ledgerBottomTop rounded-full bg-green"></span>
+              <span className="absolute rotate-90 top-auto bottom-0 -right-4 z-10 h-2 w-10 animate-ledgerTopBottom rounded-full bg-green"></span>
               <img src="/images/about-image.jpg" alt="" />
             </div>
           </div>

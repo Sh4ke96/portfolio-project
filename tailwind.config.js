@@ -18,6 +18,9 @@ module.exports = {
         xl: "1280px",
         xxl: "1350px",
       },
+      borderWidth: {
+        10: "10px",
+      },
     },
   },
   plugins: [],

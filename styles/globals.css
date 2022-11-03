@@ -46,3 +46,51 @@
     transform: translateX(128px);
   }
 }
+
+.animate-ledgerLeftRight {
+  animation:ledgerLeftRight 3s ease-in-out infinite;
+}
+@keyframes ledgerLeftRight {
+  0% {
+   left:-40px
+  }
+  to {
+   left:100%
+  }
+ }
+
+.animate-ledgerRightLeft {
+  animation:ledgerRightLeft 3s ease-in-out infinite;
+}
+@keyframes ledgerRightLeft {
+  0% {
+   right:-40px
+  }
+  to {
+   right:100%
+  }
+ }
+
+ .animate-ledgerBottomTop {
+  animation:ledgerBottomTop 3s ease-in-out infinite;
+}
+@keyframes ledgerBottomTop {
+  0% {
+   bottom:-40px
+  }
+  to {
+   bottom:100%
+  }
+ }
+ 
+ .animate-ledgerTopBottom {
+  animation:ledgerTopBottom 3s ease-in-out infinite;
+}
+@keyframes ledgerTopBottom {
+  0% {
+   top:-40px
+  }
+  to {
+   top:100%
+  }
+ }
