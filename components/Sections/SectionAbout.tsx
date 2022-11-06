@@ -4,16 +4,16 @@ import Heading from "../Heading/Heading";
 
 const SectionAbout: FC = () => {
   return (
-    <section className="container mx-auto flex flex-col items-center justify-center px-5 py-16 z-20">
+    <section className="container mx-auto flex flex-col items-center justify-center px-5 py-16">
       <Heading title="about me" />
       <div className="grid grid-cols-2 items-center gap-7">
         <div className="col-span-2 lg:col-span-1">
           <div className="about-image relative overflow-hidden">
             <div className="border-10 border-green border-opacity-20 rounded-lg">
-              <span className="absolute -top-0 left-0 z-10 h-2 w-10 animate-ledgerLeftRight rounded-full bg-green"></span>
-              <span className="absolute top-auto left-auto bottom-0 z-10 h-2 w-10 animate-ledgerRightLeft rounded-full bg-green"></span>
-              <span className="absolute rotate-90 top-auto bottom-0 -left-4 z-10 h-2 w-10 animate-ledgerBottomTop rounded-full bg-green"></span>
-              <span className="absolute rotate-90 top-auto bottom-0 -right-4 z-10 h-2 w-10 animate-ledgerTopBottom rounded-full bg-green"></span>
+              <span className="absolute -top-0 left-0 z-10 h-2 w-10 animate-ledgerLeftRight rounded-full bg-gradient-to-r from-transparent to-green"></span>
+              <span className="absolute top-auto left-auto bottom-0 z-10 h-2 w-10 animate-ledgerRightLeft rounded-full  bg-gradient-to-l from-transparent to-green"></span>
+              <span className="absolute rotate-90 top-auto bottom-0 -left-4 z-10 h-2 w-10 animate-ledgerBottomTop rounded-full  bg-gradient-to-l from-transparent to-green"></span>
+              <span className="absolute rotate-90 top-auto bottom-0 -right-4 z-10 h-2 w-10 animate-ledgerTopBottom rounded-full  bg-gradient-to-r from-transparent to-green"></span>
               <img src="/images/about-image.jpg" alt="" />
             </div>
           </div>
