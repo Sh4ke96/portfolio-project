@@ -10,6 +10,7 @@ module.exports = {
         green: "#72e2ae",
         blue: "#0f172a",
         gray: "#bfbecb",
+        light_blue: "#162033",
       },
       screens: {
         sm: "640px",
