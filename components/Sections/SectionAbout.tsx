@@ -136,7 +136,7 @@ const SectionAbout: FC = () => {
               src="images/icons/icon-js.svg"
               alt="javascript-icon"
             />
-            <h5 className="font-bold">VITE</h5>
+            <h5 className="font-bold">JAVASCRIPT</h5>
           </div>
         </div>
         <div className="col-span-2 lg:col-span-1 w-36 h-36">
@@ -252,7 +252,7 @@ const SectionAbout: FC = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-7 mb-4">
+      <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-7">
         <div className="col-span-2 lg:col-span-1 w-36 h-36">
           <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
             <img
