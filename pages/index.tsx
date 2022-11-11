@@ -8,6 +8,7 @@ import {
   SectionExperience,
   SectionProjects,
   SectionContact,
+  Footer,
 } from "../components/";
 
 const Home: NextPage = () => {
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       <SectionExperience />
       <SectionProjects />
       <SectionContact />
+      <Footer />
     </Wrapper>
   );
 };
