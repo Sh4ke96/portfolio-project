@@ -4,6 +4,7 @@ import SectionHero from "./Sections/SectionHero";
 import SectionAbout from "./Sections/SectionAbout";
 import SectionExperience from "./Sections/SectionExperience";
 import SectionProjects from "./Sections/SectionProjects";
+import SectionContact from "./Sections/SectionContact";
 
 export {
   Wrapper,
@@ -12,4 +13,5 @@ export {
   SectionAbout,
   SectionExperience,
   SectionProjects,
+  SectionContact,
 };

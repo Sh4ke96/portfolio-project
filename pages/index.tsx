@@ -7,6 +7,7 @@ import {
   SectionAbout,
   SectionExperience,
   SectionProjects,
+  SectionContact,
 } from "../components/";
 
 const Home: NextPage = () => {
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <SectionAbout />
       <SectionExperience />
       <SectionProjects />
+      <SectionContact />
     </Wrapper>
   );
 };

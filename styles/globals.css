@@ -33,6 +33,17 @@
   background-color: #72e2ae;
 }
 
+input, textarea {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border-color: #72e2ae;
+}
+
 /* ANIMATIONS */
 
 .animate-leftToRight {
