@@ -24,7 +24,9 @@ const SectionContact: FC = () => {
               </span>
               <div className="content">
                 <h5 className="font-bold text-lg mb-2">Contact on phone</h5>
-                <p className="mb-0">506 296 804</p>
+                <p className="mb-0 text-gray hover:text-green delay-100">
+                  <a href="tel:+48 506 296 804">506 296 804</a>
+                </p>
               </div>
             </div>
             <div className="contact-block flex items-center mb-6 p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
@@ -33,7 +35,9 @@ const SectionContact: FC = () => {
               </span>
               <div className="content">
                 <h5 className="font-bold text-lg mb-2">Contact on mail</h5>
-                <p className="mb-0">artur.michalek@o2.pl</p>
+                <p className="mb-0 text-gray hover:text-green delay-100">
+                  <a href="mailto:artur.michalek@o2.pl">artur.michalek@o2.pl</a>
+                </p>
               </div>
             </div>
             <div className="contact-block flex items-center p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
