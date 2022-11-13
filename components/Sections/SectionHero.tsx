@@ -1,10 +1,14 @@
 import { FC } from "react";
 import Socials from "../Socials/Socials";
 import { RiArrowDownLine } from "react-icons/ri";
+import { Link } from "react-scroll";
 
 const SectionHero: FC = () => {
   return (
-    <section className="container mx-auto flex flex-col items-center justify-center h-screen p-5">
+    <section
+      id="hero_section"
+      className="container mx-auto flex flex-col items-center justify-center h-screen p-5"
+    >
       <div className="w-full min-h-full flex flex-col items-center justify-center md:w-2/4">
         <div className="border-4 rounded-full border-green w-32 h-32 mb-8"></div>
         <h1 className="text-white text-5xl font-bold mb-5 text-center">
@@ -17,10 +21,12 @@ const SectionHero: FC = () => {
         </p>
         <Socials />
       </div>
-      <div className="absolute flex left-0 top-auto bottom-10 w-full text-center justify-center items-center text-gray text-md uppercase">
-        <RiArrowDownLine className="fill-green mr-4 animate-bounce" />
-        Scroll down
-      </div>
+      <Link smooth={true} duration={1000} offset={-100} to="about_section">
+        <div className="absolute flex left-0 top-auto bottom-10 w-full text-center justify-center items-center text-gray text-md uppercase">
+          <RiArrowDownLine className="cursor-pointer fill-green mr-4 animate-bounce" />
+          <span className="cursor-pointer">Scroll down</span>
+        </div>
+      </Link>
     </section>
   );
 };

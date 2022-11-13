@@ -5,7 +5,10 @@ import { RiMailLine, RiMapPin2Fill, RiPhoneFill } from "react-icons/ri";
 
 const SectionContact: FC = () => {
   return (
-    <section className="container mx-auto flex flex-col items-center justify-center px-5 py-16">
+    <section
+      id="contact_section"
+      className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
+    >
       <Heading title="contact" />
       <div className="grid grid-cols-9 gap-7 mb-16">
         <div className="col-span-9 lg:col-span-4">

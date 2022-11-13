@@ -3,7 +3,10 @@ import Heading from "../Heading/Heading";
 
 const SectionExperience: FC = () => {
   return (
-    <section className="container mx-auto flex flex-col items-center justify-center px-5 py-16">
+    <section
+      id="experience_section"
+      className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
+    >
       <Heading title="experience" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-7 mb-4">
         <div className="col-span-1 flex flex-col justify-center items-center">

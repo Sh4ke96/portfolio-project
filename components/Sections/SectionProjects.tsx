@@ -1,14 +1,20 @@
 import { FC } from "react";
+import Image from "next/image";
 import Heading from "../Heading/Heading";
 
 const SectionProjects: FC = () => {
   return (
-    <section className="container mx-auto flex flex-col items-center justify-center px-5 py-16">
+    <section
+      id="projects_section"
+      className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
+    >
       <Heading title="projects" />
       <div className="grid grid-cols-6 gap-7 mb-8">
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
-            <img
+            <Image
+              width={450}
+              height={315}
               className="mb-2"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
@@ -19,7 +25,9 @@ const SectionProjects: FC = () => {
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
-            <img
+            <Image
+              width={450}
+              height={315}
               className="mb-2"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
@@ -30,7 +38,9 @@ const SectionProjects: FC = () => {
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
-            <img
+            <Image
+              width={450}
+              height={315}
               className="mb-2"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
@@ -43,7 +53,9 @@ const SectionProjects: FC = () => {
       <div className="grid grid-cols-6 gap-7">
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
-            <img
+            <Image
+              width={450}
+              height={315}
               className="mb-2"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
@@ -54,7 +66,9 @@ const SectionProjects: FC = () => {
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
-            <img
+            <Image
+              width={450}
+              height={315}
               className="mb-2"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
@@ -65,7 +79,9 @@ const SectionProjects: FC = () => {
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
-            <img
+            <Image
+              width={450}
+              height={315}
               className="mb-2"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"

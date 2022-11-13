@@ -1,17 +1,18 @@
 import { FC, useState } from "react";
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Header: FC = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <header className="fixed w-full z-50 container-full border-b border-white border-opacity-20 bg-blue bg-opacity-80 backdrop-blur backdrop-filter">
       <div className="container flex items-center justify-between mx-auto p-5">
-        <a href="/">
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl text-green font-bold uppercase">
+        <Link to="hero_section" smooth={true} duration={500}>
+          <h1 className=" cursor-pointer text-2xl sm:text-4xl lg:text-5xl text-green font-bold uppercase">
             Michałek<span className="text-white">.</span>
           </h1>
-        </a>
+        </Link>
         <div className="header-mobilenav flex lg:hidden">
           {showMenu && (
             <motion.div
@@ -31,46 +32,76 @@ const Header: FC = () => {
             >
               <div className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blue">
                 <ul className="sm:text-2xl md:text-3xl">
-                  <li className="text-white py-3">
-                    <a
-                      href="/"
+                  <li className="text-white py-3 cursor-pointer">
+                    <Link
+                      smooth={true}
+                      duration={1000}
+                      offset={-100}
+                      onClick={() => {
+                        setShowMenu((prev) => !prev);
+                      }}
+                      to="hero_section"
                       className="uppercase tracking-wider  font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
                     >
                       <span className="text-green pr-1">01.</span>Home
-                    </a>
+                    </Link>
                   </li>
-                  <li className="text-white py-3">
-                    <a
-                      href="/"
+                  <li className="text-white py-3 cursor-pointer">
+                    <Link
+                      smooth={true}
+                      duration={1000}
+                      offset={-100}
+                      onClick={() => {
+                        setShowMenu((prev) => !prev);
+                      }}
+                      to="about_section"
                       className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
                     >
                       <span className="text-green pr-1">02.</span>About
-                    </a>
+                    </Link>
                   </li>
-                  <li className="text-white  py-3">
-                    <a
-                      href="/"
+                  <li className="text-white py-3 cursor-pointer">
+                    <Link
+                      smooth={true}
+                      duration={1000}
+                      offset={-100}
+                      onClick={() => {
+                        setShowMenu((prev) => !prev);
+                      }}
+                      to="experience_section"
                       className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
                     >
                       <span className="text-green pr-1">03.</span>Experience
-                    </a>
+                    </Link>
                   </li>
-                  <li className="text-white  py-3">
-                    <a
-                      href="/"
+                  <li className="text-white py-3 cursor-pointer">
+                    <Link
+                      smooth={true}
+                      duration={1000}
+                      offset={-100}
+                      onClick={() => {
+                        setShowMenu((prev) => !prev);
+                      }}
+                      to="projects_section"
                       className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
                     >
                       <span className="text-green pr-1">04.</span>
                       Projects
-                    </a>
+                    </Link>
                   </li>
-                  <li className="text-white py-3">
-                    <a
-                      href="/"
+                  <li className="text-white py-3 cursor-pointer">
+                    <Link
+                      smooth={true}
+                      duration={1000}
+                      offset={-100}
+                      onClick={() => {
+                        setShowMenu((prev) => !prev);
+                      }}
+                      to="contact_section"
                       className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
                     >
                       <span className="text-green pr-1">05.</span>Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -103,46 +134,61 @@ const Header: FC = () => {
         </div>
         <nav className="hidden lg:flex items-center">
           <ul className="flex">
-            <li className="text-white pr-6">
-              <a
-                href="/"
+            <li className="text-white pr-6 cursor-pointer">
+              <Link
+                smooth={true}
+                duration={500}
+                offset={-100}
+                to="hero_section"
                 className="uppercase tracking-wider  font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
               >
                 <span className="text-green pr-1">01.</span>Home
-              </a>
+              </Link>
             </li>
-            <li className="text-white pr-6">
-              <a
-                href="/"
+            <li className="text-white pr-6 cursor-pointer">
+              <Link
+                smooth={true}
+                duration={500}
+                offset={-100}
+                to="about_section"
                 className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
               >
                 <span className="text-green pr-1">02.</span>About
-              </a>
+              </Link>
             </li>
-            <li className="text-white pr-6">
-              <a
-                href="/"
+            <li className="text-white pr-6 cursor-pointer">
+              <Link
+                smooth={true}
+                duration={500}
+                offset={-100}
+                to="experience_section"
                 className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
               >
                 <span className="text-green pr-1">03.</span>Experience
-              </a>
+              </Link>
             </li>
-            <li className="text-white pr-6">
-              <a
-                href="/"
+            <li className="text-white pr-6 cursor-pointer">
+              <Link
+                smooth={true}
+                duration={500}
+                offset={-100}
+                to="projects_section"
                 className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
               >
                 <span className="text-green pr-1">04.</span>
                 Projects
-              </a>
+              </Link>
             </li>
-            <li className="text-white">
-              <a
-                href="/"
+            <li className="text-white cursor-pointer">
+              <Link
+                smooth={true}
+                duration={500}
+                offset={-100}
+                to="contact_section"
                 className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
               >
                 <span className="text-green pr-1">05.</span>Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

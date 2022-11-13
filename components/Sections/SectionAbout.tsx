@@ -4,7 +4,10 @@ import Heading from "../Heading/Heading";
 
 const SectionAbout: FC = () => {
   return (
-    <section className="container mx-auto flex flex-col items-center justify-center px-5 py-16">
+    <section
+      id="about_section"
+      className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
+    >
       <Heading title="about me" />
       <div className="grid grid-cols-2 items-center gap-7 mb-16">
         <div className="col-span-2 lg:col-span-1">
