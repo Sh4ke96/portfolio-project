@@ -1,4 +1,5 @@
 import { FC } from "react";
+import ScrollButton from "../Button/ScrollButton";
 import Button from "../Button/Button";
 import Heading from "../Heading/Heading";
 
@@ -6,7 +7,7 @@ const SectionAbout: FC = () => {
   return (
     <section
       id="about_section"
-      className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
+      className="relative container mx-auto flex flex-col items-center justify-center px-5 py-16"
     >
       <Heading title="about me" />
       <div className="grid grid-cols-2 items-center gap-7 mb-16">
@@ -68,6 +69,7 @@ const SectionAbout: FC = () => {
           </div>
         </div>
       </div>
+      <ScrollButton />
       <Heading title="my skills" />
       <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-7 mb-4">
         <div className="col-span-2 lg:col-span-1 w-36 h-36">
