@@ -26,7 +26,6 @@ const ScrollButton: FC = () => {
           <RiArrowUpLine className="fill-blue hover:fill-white delay-100" />
         </button>
       )}
-      ;
     </>
   );
 };

@@ -1,12 +1,28 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import Button from "../Button/Button";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 const Header: FC = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [fixed, setFixed] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        setFixed(window.pageYOffset > 300)
+      );
+    }
+  }, []);
+
   return (
-    <header className="fixed w-full z-50 container-full border-b border-white border-opacity-20 bg-blue bg-opacity-80 backdrop-blur backdrop-filter">
+    <header
+      className={`header ${
+        fixed
+          ? "fixed w-full z-50 container-full border-b border-white border-opacity-20 bg-blue bg-opacity-80 backdrop-blur backdrop-filter"
+          : "fixed w-full z-50 container-full"
+      }`}
+    >
       <div className="container flex items-center justify-between mx-auto p-5">
         <Link to="hero_section" smooth={true} duration={500}>
           <h1 className=" cursor-pointer text-2xl sm:text-4xl lg:text-5xl text-green font-bold uppercase">
