@@ -208,7 +208,9 @@ const Header: FC = () => {
             </li>
           </ul>
         </nav>
-        <Button>Hire me</Button>
+        <Link smooth={true} duration={500} offset={-100} to="contact_section">
+          <Button>Hire me</Button>
+        </Link>
       </div>
     </header>
   );
