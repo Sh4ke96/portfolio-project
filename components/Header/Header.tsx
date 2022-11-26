@@ -10,7 +10,7 @@ const Header: FC = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
-        setFixed(window.pageYOffset > 300)
+        setFixed(window.pageYOffset > 200)
       );
     }
   }, []);

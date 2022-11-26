@@ -4,6 +4,7 @@ import {
   RiFacebookFill,
   RiGithubFill,
   RiLinkedinBoxFill,
+  RiFileList3Line,
 } from "react-icons/ri";
 
 const Socials: FC = () => {
@@ -38,6 +39,11 @@ const Socials: FC = () => {
           <li className="border-2 border-green rounded-full hover:border-gray delay-100">
             <a href="https://www.linkedin.com/in/artur-micha%C5%82ek-69863918b/">
               <RiLinkedinBoxFill className="text-4xl p-2 fill-gray hover:fill-green delay-100" />
+            </a>
+          </li>
+          <li className="border-2 border-green rounded-full hover:border-gray delay-100">
+            <a href="#">
+              <RiFileList3Line className="text-4xl p-2 fill-gray hover:fill-green delay-100" />
             </a>
           </li>
         </ul>

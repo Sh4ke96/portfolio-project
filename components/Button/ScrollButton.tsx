@@ -21,9 +21,9 @@ const ScrollButton: FC = () => {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="fixed bottom-32 right-2 lg:right-8 flex justify-center items-center rounded-full bg-green w-8 h-8"
+          className="fixed bottom-32 right-2 lg:right-8 flex justify-center items-center rounded-full bg-green w-12 h-12"
         >
-          <RiArrowUpLine className="fill-blue hover:fill-white delay-100" />
+          <RiArrowUpLine className="text-2xl fill-blue hover:fill-white delay-100" />
         </button>
       )}
     </>

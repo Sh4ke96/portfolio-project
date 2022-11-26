@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import Heading from "../Heading/Heading";
+import { RiShareBoxFill, RiGithubFill } from "react-icons/ri";
 
 const SectionProjects: FC = () => {
   return (
@@ -19,8 +20,20 @@ const SectionProjects: FC = () => {
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
-            <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
-            <p className="text-gray text-lg">Lorem ipsum</p>
+            <div className="flex items-center justify-between pt-4">
+              <div>
+                <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
+                <p className="text-gray text-lg">Lorem ipsum</p>
+              </div>
+              <div className="flex">
+                <a href="#">
+                  <RiShareBoxFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+                <a href="#">
+                  <RiGithubFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -32,8 +45,20 @@ const SectionProjects: FC = () => {
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
-            <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
-            <p className="text-gray text-lg">Lorem ipsum</p>
+            <div className="flex items-center justify-between pt-4">
+              <div>
+                <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
+                <p className="text-gray text-lg">Lorem ipsum</p>
+              </div>
+              <div className="flex">
+                <a href="#">
+                  <RiShareBoxFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+                <a href="#">
+                  <RiGithubFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -45,8 +70,20 @@ const SectionProjects: FC = () => {
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
-            <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
-            <p className="text-gray text-lg">Lorem ipsum</p>
+            <div className="flex items-center justify-between pt-4">
+              <div>
+                <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
+                <p className="text-gray text-lg">Lorem ipsum</p>
+              </div>
+              <div className="flex">
+                <a href="#">
+                  <RiShareBoxFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+                <a href="#">
+                  <RiGithubFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -60,8 +97,20 @@ const SectionProjects: FC = () => {
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
-            <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
-            <p className="text-gray text-lg">Lorem ipsum</p>
+            <div className="flex items-center justify-between pt-4">
+              <div>
+                <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
+                <p className="text-gray text-lg">Lorem ipsum</p>
+              </div>
+              <div className="flex">
+                <a href="#">
+                  <RiShareBoxFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+                <a href="#">
+                  <RiGithubFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -73,8 +122,20 @@ const SectionProjects: FC = () => {
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
-            <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
-            <p className="text-gray text-lg">Lorem ipsum</p>
+            <div className="flex items-center justify-between pt-4">
+              <div>
+                <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
+                <p className="text-gray text-lg">Lorem ipsum</p>
+              </div>
+              <div className="flex">
+                <a href="#">
+                  <RiShareBoxFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+                <a href="#">
+                  <RiGithubFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -86,8 +147,20 @@ const SectionProjects: FC = () => {
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
-            <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
-            <p className="text-gray text-lg">Lorem ipsum</p>
+            <div className="flex items-center justify-between pt-4">
+              <div>
+                <h5 className="font-bold text-white text-xl">Lorem Ipsum</h5>
+                <p className="text-gray text-lg">Lorem ipsum</p>
+              </div>
+              <div className="flex">
+                <a href="#">
+                  <RiShareBoxFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+                <a href="#">
+                  <RiGithubFill className="text-6xl p-2 fill-gray hover:fill-green delay-100" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -16,9 +16,9 @@ const SectionExperience: FC = () => {
           <h5 className="text-green text-xl font-bold">Frontend Developer</h5>
           <p className="mb-2 text-white text-lg">Konceptika</p>
           <p className="w-3/4 mb-2 text-gray text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            consectetur donec gravida ullamcorper cum id. Sit viverra donec in
-            ornare euismod.
+            Work with a variety of different languages, platforms, frameworks,
+            and content management systems such as JavaScript, TypeScript,
+            React, Next.js, PHP, WordPress, and Vercel.
           </p>
         </div>
         <div className="col-span-1 flex flex-col justify-center items-center">
@@ -28,9 +28,8 @@ const SectionExperience: FC = () => {
           <h5 className="text-green text-xl font-bold">Frontend Developer</h5>
           <p className="mb-2 text-white text-lg">ArtGroup</p>
           <p className="w-3/4 mb-2 text-gray text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            consectetur donec gravida ullamcorper cum id. Sit viverra donec in
-            ornare euismod.
+            Developed and maintained code for in-house and client websites
+            primarily using HTML, CSS, Sass, JavaScript, and jQuery.
           </p>
         </div>
         <div className="col-span-1 flex flex-col justify-center items-center">
@@ -40,9 +39,8 @@ const SectionExperience: FC = () => {
           <h5 className="text-green text-xl font-bold">Support</h5>
           <p className="mb-2 text-white text-lg">HCL Poland</p>
           <p className="w-3/4 mb-2 text-gray text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            consectetur donec gravida ullamcorper cum id. Sit viverra donec in
-            ornare euismod.
+            Technical assistance to users, troubleshooting, answering questions
+            using the SAP system. Responsible for communicating with clients.
           </p>
         </div>
       </div>

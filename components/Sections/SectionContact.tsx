@@ -16,8 +16,9 @@ const SectionContact: FC = () => {
             Contact Information
           </h4>
           <p className="text-gray mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis,
-            iusto harum possimus non praesentium qui facere.
+            Interested in working together? Fill out the form below with some
+            information. <br />
+            Please allow a couple days for me to respond.
           </p>
           <span className="inline-block h-1 w-20 rounded-full bg-green bg-opacity-20"></span>
           <div className="contact-blocks mt-5">
