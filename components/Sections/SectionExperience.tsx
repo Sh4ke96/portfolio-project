@@ -6,7 +6,7 @@ const SectionExperience: FC = () => {
   return (
     <section
       id="experience_section"
-      className="z-20 relative container mx-auto flex flex-col items-center justify-center px-5 py-16"
+      className="relative container mx-auto flex flex-col items-center justify-center px-5 py-16"
     >
       <motion.div
         viewport={{ once: true }}

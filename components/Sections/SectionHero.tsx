@@ -23,7 +23,7 @@ const SectionHero: FC = () => {
     >
       <section
         id="hero_section"
-        className="z-20 container mx-auto flex flex-col items-center justify-center h-screen p-5 relative"
+        className="container mx-auto flex flex-col items-center justify-center h-screen p-5 relative"
       >
         <div className="w-full min-h-full flex flex-col items-center justify-center md:w-2/4">
           <div className="border-4 rounded-full border-green w-32 h-32 mb-8"></div>
