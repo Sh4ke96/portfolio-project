@@ -208,8 +208,14 @@ const Header: FC = () => {
             </li>
           </ul>
         </nav>
-        <Link smooth={true} duration={500} offset={-100} to="contact_section">
-          <Button>Hire me</Button>
+        <Link
+          className="hidden xl:block"
+          smooth={true}
+          duration={500}
+          offset={-100}
+          to="contact_section"
+        >
+          <Button hide="hidden">Hire me</Button>
         </Link>
       </div>
     </header>

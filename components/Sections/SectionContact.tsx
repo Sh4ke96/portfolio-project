@@ -125,7 +125,7 @@ const SectionContact: FC = () => {
                 Name
               </label>
               {formik.touched.name && formik.errors.name && (
-                <p className="text-sm">{formik.errors.name}</p>
+                <p className="text-xs pb-2 text-gray">{formik.errors.name}</p>
               )}
               <input
                 className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
@@ -143,7 +143,7 @@ const SectionContact: FC = () => {
                 Email
               </label>
               {formik.touched.email && formik.errors.email && (
-                <p>{formik.errors.email}</p>
+                <p className="text-xs pb-2 text-gray">{formik.errors.email}</p>
               )}
               <input
                 className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
@@ -161,7 +161,9 @@ const SectionContact: FC = () => {
                 Subject
               </label>
               {formik.touched.subject && formik.errors.subject && (
-                <p>{formik.errors.subject}</p>
+                <p className="text-xs pb-2 text-gray">
+                  {formik.errors.subject}
+                </p>
               )}
               <input
                 className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
@@ -179,7 +181,9 @@ const SectionContact: FC = () => {
                 Message
               </label>
               {formik.touched.message && formik.errors.message && (
-                <p>{formik.errors.message}</p>
+                <p className="text-xs pb-2 text-gray">
+                  {formik.errors.message}
+                </p>
               )}
               <textarea
                 className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
@@ -193,7 +197,9 @@ const SectionContact: FC = () => {
                 onBlur={formik.handleBlur}
               />
             </div>
-            <Button type="submit">send mail</Button>
+            <Button type="submit" hide="block">
+              send mail
+            </Button>
           </form>
         </div>
       </div>
