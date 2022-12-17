@@ -19,7 +19,7 @@ const Socials: FC = () => {
         visible: {
           opacity: 1,
           transition: {
-            delay: 0.5,
+            delay: 1,
           },
         },
       }}

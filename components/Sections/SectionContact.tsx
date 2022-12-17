@@ -2,6 +2,7 @@ import { FC, useRef } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 
 import { RiMailLine, RiMapPin2Fill, RiPhoneFill } from "react-icons/ri";
 import Button from "../Button/Button";
@@ -66,147 +67,161 @@ const SectionContact: FC = () => {
       id="contact_section"
       className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
     >
-      <Heading title="contact" />
-      <div className="grid grid-cols-9 gap-7 mb-16 items-center">
-        <div className="col-span-9 lg:col-span-4">
-          <h4 className="text-white text-xl font-bold mb-4">
-            Contact Information
-          </h4>
-          <p className="text-gray mb-4">
-            Interested in working together? Fill out the form below with some
-            information. <br />
-            Please allow a couple days for me to respond.
-          </p>
-          <span className="inline-block h-1 w-20 rounded-full bg-green bg-opacity-20"></span>
-          <div className="contact-blocks mt-5">
-            <div className="contact-block flex items-center mb-6 p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
-              <span className="mr-4 inline-flex h-16 w-16 shrink-0 grow-0 basis-16 items-center justify-center rounded-full bg-green bg-opacity-10 text-3xl">
-                <RiPhoneFill className="fill-green" />
-              </span>
-              <div className="content">
-                <h5 className="font-bold text-lg mb-2">Contact on phone</h5>
-                <p className="mb-0 text-gray hover:text-green delay-100">
-                  <a href="tel:+48 506 296 804">506 296 804</a>
-                </p>
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "easeIn", duration: 0.25, delay: 1 }}
+      >
+        <Heading title="contact" />
+      </motion.div>
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "easeIn", duration: 0.25, delay: 1.5 }}
+      >
+        <div className="grid grid-cols-9 gap-7 mb-16 items-center">
+          <div className="col-span-9 lg:col-span-4">
+            <h4 className="text-white text-xl font-bold mb-4">
+              Contact Information
+            </h4>
+            <p className="text-gray mb-4">
+              Interested in working together? Fill out the form below with some
+              information. <br />
+              Please allow a couple days for me to respond.
+            </p>
+            <span className="inline-block h-1 w-20 rounded-full bg-green bg-opacity-20"></span>
+            <div className="contact-blocks mt-5">
+              <div className="contact-block flex items-center mb-6 p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
+                <span className="mr-4 inline-flex h-16 w-16 shrink-0 grow-0 basis-16 items-center justify-center rounded-full bg-green bg-opacity-10 text-3xl">
+                  <RiPhoneFill className="fill-green" />
+                </span>
+                <div className="content">
+                  <h5 className="font-bold text-lg mb-2">Contact on phone</h5>
+                  <p className="mb-0 text-gray hover:text-green delay-100">
+                    <a href="tel:+48 506 296 804">506 296 804</a>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="contact-block flex items-center mb-6 p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
-              <span className="mr-4 inline-flex h-16 w-16 shrink-0 grow-0 basis-16 items-center justify-center rounded-full bg-green bg-opacity-10 text-3xl">
-                <RiMailLine className="fill-green" />
-              </span>
-              <div className="content">
-                <h5 className="font-bold text-lg mb-2">Contact on mail</h5>
-                <p className="mb-0 text-gray hover:text-green delay-100">
-                  <a href="mailto:artuuur.michalek@gmail.com">
-                    artuuur.michalek@gmail.com
-                  </a>
-                </p>
+              <div className="contact-block flex items-center mb-6 p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
+                <span className="mr-4 inline-flex h-16 w-16 shrink-0 grow-0 basis-16 items-center justify-center rounded-full bg-green bg-opacity-10 text-3xl">
+                  <RiMailLine className="fill-green" />
+                </span>
+                <div className="content">
+                  <h5 className="font-bold text-lg mb-2">Contact on mail</h5>
+                  <p className="mb-0 text-gray hover:text-green delay-100">
+                    <a href="mailto:artuuur.michalek@gmail.com">
+                      artuuur.michalek@gmail.com
+                    </a>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="contact-block flex items-center p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
-              <span className="mr-4 inline-flex h-16 w-16 shrink-0 grow-0 basis-16 items-center justify-center rounded-full bg-green bg-opacity-10 text-3xl">
-                <RiMapPin2Fill className="fill-green" />
-              </span>
-              <div className="content">
-                <h5 className="font-bold text-lg mb-2">Contact address</h5>
-                <p className="mb-0">123 King Street, Katowice, Poland</p>
+              <div className="contact-block flex items-center p-4 md:p-5 border border-gray border-opacity-10 rounded-lg bg-light_blue">
+                <span className="mr-4 inline-flex h-16 w-16 shrink-0 grow-0 basis-16 items-center justify-center rounded-full bg-green bg-opacity-10 text-3xl">
+                  <RiMapPin2Fill className="fill-green" />
+                </span>
+                <div className="content">
+                  <h5 className="font-bold text-lg mb-2">Contact address</h5>
+                  <p className="mb-0">123 King Street, Katowice, Poland</p>
+                </div>
               </div>
             </div>
           </div>
+          <div className="col-span-9 lg:col-span-5">
+            <form
+              ref={form}
+              onSubmit={formik.handleSubmit}
+              className="border border-gray border-opacity-10 rounded-lg bg-light_blue space-y-4 p-4 md:p-5"
+            >
+              <div className="inputbox flex flex-col">
+                <label className="mb-2 font-bold text-sm" htmlFor="name">
+                  Name
+                </label>
+                {formik.touched.name && formik.errors.name && (
+                  <p className="text-xs pb-2 text-red-500">
+                    {formik.errors.name}
+                  </p>
+                )}
+                <input
+                  className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name..."
+                  name="name"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              <div className="inputbox flex flex-col">
+                <label className="mb-2 font-bold text-sm" htmlFor="email">
+                  Email
+                </label>
+                {formik.touched.email && formik.errors.email && (
+                  <p className="text-xs pb-2 text-red-500">
+                    {formik.errors.email}
+                  </p>
+                )}
+                <input
+                  className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email..."
+                  name="email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              <div className="inputbox flex flex-col">
+                <label className="mb-2 font-bold text-sm" htmlFor="subject">
+                  Subject
+                </label>
+                {formik.touched.subject && formik.errors.subject && (
+                  <p className="text-xs pb-2 text-red-500">
+                    {formik.errors.subject}
+                  </p>
+                )}
+                <input
+                  className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
+                  id="subject"
+                  type="text"
+                  placeholder="Enter subject..."
+                  name="subject"
+                  value={formik.values.subject}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              <div className="inputbox flex flex-col">
+                <label className="mb-2 font-bold text-sm" htmlFor="message">
+                  Message
+                </label>
+                {formik.touched.message && formik.errors.message && (
+                  <p className="text-xs pb-2 text-red-500">
+                    {formik.errors.message}
+                  </p>
+                )}
+                <textarea
+                  className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
+                  id="message"
+                  placeholder="Enter your message..."
+                  cols={1}
+                  rows={3}
+                  name="message"
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              <Button type="submit" hide="block">
+                send mail
+              </Button>
+            </form>
+          </div>
         </div>
-        <div className="col-span-9 lg:col-span-5">
-          <form
-            ref={form}
-            onSubmit={formik.handleSubmit}
-            className="border border-gray border-opacity-10 rounded-lg bg-light_blue space-y-4 p-4 md:p-5"
-          >
-            <div className="inputbox flex flex-col">
-              <label className="mb-2 font-bold text-sm" htmlFor="name">
-                Name
-              </label>
-              {formik.touched.name && formik.errors.name && (
-                <p className="text-xs pb-2 text-red-500">
-                  {formik.errors.name}
-                </p>
-              )}
-              <input
-                className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
-                id="name"
-                type="text"
-                placeholder="Enter your name..."
-                name="name"
-                value={formik.values.name}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            <div className="inputbox flex flex-col">
-              <label className="mb-2 font-bold text-sm" htmlFor="email">
-                Email
-              </label>
-              {formik.touched.email && formik.errors.email && (
-                <p className="text-xs pb-2 text-red-500">
-                  {formik.errors.email}
-                </p>
-              )}
-              <input
-                className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
-                id="email"
-                type="email"
-                placeholder="Enter your email..."
-                name="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            <div className="inputbox flex flex-col">
-              <label className="mb-2 font-bold text-sm" htmlFor="subject">
-                Subject
-              </label>
-              {formik.touched.subject && formik.errors.subject && (
-                <p className="text-xs pb-2 text-red-500">
-                  {formik.errors.subject}
-                </p>
-              )}
-              <input
-                className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
-                id="subject"
-                type="text"
-                placeholder="Enter subject..."
-                name="subject"
-                value={formik.values.subject}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            <div className="inputbox flex flex-col">
-              <label className="mb-2 font-bold text-sm" htmlFor="message">
-                Message
-              </label>
-              {formik.touched.message && formik.errors.message && (
-                <p className="text-xs pb-2 text-red-500">
-                  {formik.errors.message}
-                </p>
-              )}
-              <textarea
-                className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
-                id="message"
-                placeholder="Enter your message..."
-                cols={1}
-                rows={3}
-                name="message"
-                value={formik.values.message}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-            </div>
-            <Button type="submit" hide="block">
-              send mail
-            </Button>
-          </form>
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
