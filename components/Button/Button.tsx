@@ -2,6 +2,7 @@ import { FC } from "react";
 
 interface ButtonProps {
   children?: string;
+  type?: "submit" | "reset" | "button";
 }
 
 const Button: FC<ButtonProps> = ({ children }) => {
