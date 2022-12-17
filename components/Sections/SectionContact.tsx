@@ -65,7 +65,7 @@ const SectionContact: FC = () => {
   return (
     <section
       id="contact_section"
-      className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
+      className="relative container mx-auto flex flex-col items-center justify-center px-5 py-16"
     >
       <motion.div
         viewport={{ once: true }}

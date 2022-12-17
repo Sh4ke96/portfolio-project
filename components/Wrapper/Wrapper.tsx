@@ -5,7 +5,20 @@ interface WrapperProps {
 }
 
 const Wrapper: FC<WrapperProps> = ({ children }) => {
-  return <div className="bg-blue">{children}</div>;
+  return (
+    <div className="bg-blue lines">
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      <div className="line"></div>
+      {children}
+    </div>
+  );
 };
 
 export default Wrapper;

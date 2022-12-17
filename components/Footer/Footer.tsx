@@ -7,7 +7,7 @@ import {
 
 const Footer: FC = () => {
   return (
-    <footer className="footer relative z-20 border-t border-white border-opacity-10 bg-grey bg-opacity-95 backdrop-blur backdrop-filter">
+    <footer className="footer relative border-t border-white border-opacity-10 bg-grey bg-opacity-95 backdrop-blur backdrop-filter">
       <div className="container mx-auto flex flex-wrap items-center justify-between gap-y-5 gap-x-7 p-5 text-center md:flex-nowrap">
         <div className="w-full md:w-auto">
           <ul className="mb-0 inline-flex list-none flex-wrap gap-3 pl-0 sm:gap-4">

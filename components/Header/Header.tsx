@@ -53,7 +53,7 @@ const Header: FC = () => {
                 }}
               >
                 <div className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blue">
-                  <ul className="sm:text-2xl md:text-3xl">
+                  <ul className="text-2xl md:text-3xl">
                     <li className="text-white py-3 cursor-pointer">
                       <Link
                         smooth={true}
@@ -162,7 +162,7 @@ const Header: FC = () => {
                   duration={500}
                   offset={-100}
                   to="hero_section"
-                  className="uppercase tracking-wider  font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
+                  className="uppercase tracking-wider font-semibold pb-2 hover:border-green hover:border-b-2 delay-100"
                 >
                   <span className="text-green pr-1">01.</span>Home
                 </Link>
