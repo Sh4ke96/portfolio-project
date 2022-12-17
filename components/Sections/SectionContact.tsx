@@ -28,7 +28,7 @@ const SectionContact: FC = () => {
           console.log("Email send successfull");
         },
         (error) => {
-          console.log("Email send error");
+          console.log("Email send failed");
         }
       );
   }
@@ -67,7 +67,7 @@ const SectionContact: FC = () => {
       className="container mx-auto flex flex-col items-center justify-center px-5 py-16"
     >
       <Heading title="contact" />
-      <div className="grid grid-cols-9 gap-7 mb-16">
+      <div className="grid grid-cols-9 gap-7 mb-16 items-center">
         <div className="col-span-9 lg:col-span-4">
           <h4 className="text-white text-xl font-bold mb-4">
             Contact Information
@@ -125,7 +125,9 @@ const SectionContact: FC = () => {
                 Name
               </label>
               {formik.touched.name && formik.errors.name && (
-                <p className="text-xs pb-2 text-gray">{formik.errors.name}</p>
+                <p className="text-xs pb-2 text-red-500">
+                  {formik.errors.name}
+                </p>
               )}
               <input
                 className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
@@ -143,7 +145,9 @@ const SectionContact: FC = () => {
                 Email
               </label>
               {formik.touched.email && formik.errors.email && (
-                <p className="text-xs pb-2 text-gray">{formik.errors.email}</p>
+                <p className="text-xs pb-2 text-red-500">
+                  {formik.errors.email}
+                </p>
               )}
               <input
                 className="w-full bg-blue border border-gray rounded-lg border-opacity-10 p-3"
@@ -161,7 +165,7 @@ const SectionContact: FC = () => {
                 Subject
               </label>
               {formik.touched.subject && formik.errors.subject && (
-                <p className="text-xs pb-2 text-gray">
+                <p className="text-xs pb-2 text-red-500">
                   {formik.errors.subject}
                 </p>
               )}
@@ -181,7 +185,7 @@ const SectionContact: FC = () => {
                 Message
               </label>
               {formik.touched.message && formik.errors.message && (
-                <p className="text-xs pb-2 text-gray">
+                <p className="text-xs pb-2 text-red-500">
                   {formik.errors.message}
                 </p>
               )}

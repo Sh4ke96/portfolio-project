@@ -14,9 +14,10 @@ const SectionProjects: FC = () => {
         <div className="col-span-4 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
             <Image
-              width={450}
-              height={315}
-              className="mb-2"
+              width={0}
+              height={0}
+              sizes={"100vw"}
+              className="mb-2 w-full h-auto"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
@@ -39,9 +40,10 @@ const SectionProjects: FC = () => {
         <div className="col-span-4 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
             <Image
-              width={450}
-              height={315}
-              className="mb-2"
+              width={0}
+              height={0}
+              sizes={"100vw"}
+              className="mb-2 w-full h-auto"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
@@ -66,9 +68,10 @@ const SectionProjects: FC = () => {
         <div className="col-span-4 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
             <Image
-              width={450}
-              height={315}
-              className="mb-2"
+              width={0}
+              height={0}
+              sizes={"100vw"}
+              className="mb-2 w-full h-auto"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
@@ -91,9 +94,10 @@ const SectionProjects: FC = () => {
         <div className="col-span-4 lg:col-span-2">
           <div className="border border-1 border-gray border-opacity-10 rounded-lg p-4 md:p-5 bg-light_blue">
             <Image
-              width={450}
-              height={315}
-              className="mb-2"
+              width={0}
+              height={0}
+              sizes={"100vw"}
+              className="mb-2 w-full h-auto"
               src="/images/portfolio-image-1.jpg"
               alt="coconut oil"
             />
