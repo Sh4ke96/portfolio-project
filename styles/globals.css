@@ -12,6 +12,10 @@
   color: #ffffff;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* GLOBAL ELEMENTS */
 
 .styledList{
