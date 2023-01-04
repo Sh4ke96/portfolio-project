@@ -42,7 +42,7 @@ const Socials: FC = () => {
             </a>
           </li>
           <li className="border-2 border-green rounded-full hover:border-gray delay-100">
-            <a href="#">
+            <a href="/download/Artur Michałek - Resume.pdf" download>
               <RiFileList3Line className="text-4xl p-2 fill-gray hover:fill-green delay-100" />
             </a>
           </li>

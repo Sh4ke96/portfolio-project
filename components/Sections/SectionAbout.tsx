@@ -87,7 +87,9 @@ const SectionAbout: FC = () => {
                   : Ruda Śląska
                 </li>
               </ul>
-              <Button>download resume</Button>
+              <a href="/download/Artur Michałek - Resume.pdf" download>
+                <Button>download resume</Button>
+              </a>
             </div>
           </div>
         </div>
