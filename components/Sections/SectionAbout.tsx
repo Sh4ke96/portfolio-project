@@ -9,7 +9,7 @@ const SectionAbout: FC = () => {
   return (
     <section
       id="about_section"
-      className="relative container mx-auto flex flex-col items-center justify-center px-5 py-16"
+      className="container relative flex flex-col items-center justify-center px-5 py-16 mx-auto"
     >
       <motion.div
         viewport={{ once: true }}
@@ -25,31 +25,13 @@ const SectionAbout: FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ type: "easeIn", duration: 0.25, delay: 0.75 }}
       >
-        <div className="grid grid-cols-2 items-center gap-7 mb-16">
-          <div className="col-span-2 lg:col-span-1">
-            <div className="about-image relative overflow-hidden">
-              <div className="border-10 border-green border-opacity-20 rounded-lg">
-                <span className="absolute -top-0 left-0 z-10 h-2 w-10 animate-ledgerLeftRight rounded-full bg-gradient-to-r from-transparent to-green"></span>
-                <span className="absolute top-auto left-auto bottom-0 z-10 h-2 w-10 animate-ledgerRightLeft rounded-full  bg-gradient-to-l from-transparent to-green"></span>
-                <span className="absolute rotate-90 top-auto bottom-0 -left-4 z-10 h-2 w-10 animate-ledgerBottomTop rounded-full  bg-gradient-to-l from-transparent to-green"></span>
-                <span className="absolute rotate-90 top-auto bottom-0 -right-4 z-10 h-2 w-10 animate-ledgerTopBottom rounded-full  bg-gradient-to-r from-transparent to-green"></span>
-                <Image
-                  src="/images/about-image.jpg"
-                  alt=""
-                  width={0}
-                  height={0}
-                  sizes={"100vw"}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="col-span-2 lg:col-span-1">
-            <div className="about-content">
-              <h3 className="font-semibold text-3xl mb-6">
+        <div className="grid items-center grid-cols-2 mb-32 gap-7">
+          <div className="col-span-2">
+            <div className="flex flex-col items-center justify-center about-content">
+              <h3 className="mb-6 text-3xl font-semibold">
                 Hi, I am <span className="text-green">Artur Michałek</span>
               </h3>
-              <ul className="styledList mb-6">
+              <ul className="mb-6 styledList">
                 <li className="text-lg text-gray">
                   <strong className="inline-block min-w-[120px] font-medium text-gray">
                     First Name
@@ -66,7 +48,7 @@ const SectionAbout: FC = () => {
                   <strong className="inline-block min-w-[120px] font-medium text-gray">
                     Age
                   </strong>{" "}
-                  : 26 years
+                  : 27 years
                 </li>
                 <li className="text-lg text-gray">
                   <strong className="inline-block min-w-[120px] font-medium text-gray">
@@ -109,9 +91,9 @@ const SectionAbout: FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ type: "easeIn", duration: 0.25, delay: 1.25 }}
       >
-        <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-7 mb-4">
+        <div className="grid items-center grid-cols-4 mb-4 md:grid-cols-6 gap-7">
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 width={0}
                 height={0}
@@ -124,7 +106,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 width={0}
                 height={0}
@@ -137,7 +119,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 width={0}
                 height={0}
@@ -150,7 +132,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 width={0}
                 height={0}
@@ -163,7 +145,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 width={0}
                 height={0}
@@ -176,7 +158,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 width={0}
                 height={0}
@@ -196,9 +178,9 @@ const SectionAbout: FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ type: "easeIn", duration: 0.25, delay: 1.5 }}
       >
-        <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-7 mb-4">
+        <div className="grid items-center grid-cols-4 mb-4 md:grid-cols-6 gap-7">
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -211,7 +193,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -224,7 +206,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -237,7 +219,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -250,7 +232,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -263,7 +245,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -283,9 +265,9 @@ const SectionAbout: FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ type: "easeIn", duration: 0.25, delay: 1.75 }}
       >
-        <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-7 mb-4">
+        <div className="grid items-center grid-cols-4 mb-4 md:grid-cols-6 gap-7">
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -298,7 +280,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -311,7 +293,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -324,7 +306,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -337,7 +319,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -350,7 +332,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -370,9 +352,9 @@ const SectionAbout: FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ type: "easeIn", duration: 0.25, delay: 2 }}
       >
-        <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-7">
+        <div className="grid items-center grid-cols-4 md:grid-cols-6 gap-7">
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -385,7 +367,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -398,7 +380,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -411,7 +393,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -424,7 +406,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}
@@ -437,7 +419,7 @@ const SectionAbout: FC = () => {
             </div>
           </div>
           <div className="col-span-2 lg:col-span-1 w-36 h-36">
-            <div className="flex justify-center items-center flex-col border border-1 border-gray border-opacity-10 text-center rounded-lg p-2 md:p-3 bg-light_blue">
+            <div className="flex flex-col items-center justify-center p-2 text-center border rounded-lg border-1 border-gray border-opacity-10 md:p-3 bg-light_blue">
               <Image
                 className="w-12 h-12 mb-4"
                 width={0}

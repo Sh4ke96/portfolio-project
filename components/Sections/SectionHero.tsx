@@ -3,6 +3,7 @@ import Socials from "../Socials/Socials";
 import { RiArrowDownLine } from "react-icons/ri";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const SectionHero: FC = () => {
   return (
@@ -23,14 +24,22 @@ const SectionHero: FC = () => {
     >
       <section
         id="hero_section"
-        className="container mx-auto flex flex-col items-center justify-center h-screen p-5 relative"
+        className="container relative flex flex-col items-center justify-center h-screen p-5 mx-auto"
       >
-        <div className="w-full min-h-full flex flex-col items-center justify-center md:w-2/4">
-          <div className="border-4 rounded-full border-green w-32 h-32 mb-8"></div>
-          <h1 className="text-white text-5xl font-bold mb-5 text-center">
+        <div className="flex flex-col items-center justify-center w-full min-h-full md:w-2/4">
+          <div className="mb-8">
+            <Image
+              src="/images/avatar.jpg"
+              className="border-4 rounded-full border-green"
+              alt="Artur Michałek"
+              width={128}
+              height={128}
+            />
+          </div>
+          <h1 className="mb-5 text-5xl font-bold text-center text-white">
             Hi, I am <span className="text-green">Artur Michałek</span>
           </h1>
-          <p className="text-gray text-center text-lg mb-5 lg:mb-8">
+          <p className="mb-5 text-lg text-center text-gray lg:mb-8">
             I am a frontend web developer. I can provide clean code and pixel
             perfect design. I also make website more & more interactive with web
             animations.
@@ -53,8 +62,8 @@ const SectionHero: FC = () => {
           }}
         >
           <Link smooth={true} duration={1000} offset={-100} to="about_section">
-            <div className="absolute flex left-0 top-auto bottom-10 w-full text-center justify-center items-center text-gray text-md uppercase">
-              <RiArrowDownLine className="cursor-pointer fill-green mr-4 animate-bounce" />
+            <div className="absolute left-0 top-auto flex items-center justify-center w-full text-center uppercase bottom-10 text-gray text-md">
+              <RiArrowDownLine className="mr-4 cursor-pointer fill-green animate-bounce" />
               <span className="cursor-pointer">Scroll down</span>
             </div>
           </Link>
