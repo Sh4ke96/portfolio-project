@@ -1,213 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  font-size: 62.5%;
 
-@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&display=swap");
+  --background: rgb(17, 17, 17);
+  --bg-opaque: rgb(17, 17, 17, 0.25);
+  --background-light: rgb(35, 35, 35);
+  --background-dark: rgb(8, 8, 8);
+
+  --text: rgb(235, 236, 243);
+  --brand: rgb(242, 205, 93);
+
+  --text-xs: 1.6rem;
+  --text-sm: 1.8rem;
+  --text-md: 2.2rem;
+  --text-lg: 3.6rem;
+  --text-xl: 5.6rem;
+  --text-2xl: 9.6rem;
+}
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Radio Canada", sans-serif;
-  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+*::selection {
+  background: var(--brand);
+  color: var(--background);
+}
+
+html,
+body {
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  font-size: var(--text-sm);
 }
 
 body {
-  overflow-x: hidden;
+  color: var(--text);
+  background: var(--background);
 }
 
-/* GLOBAL ELEMENTS */
-
-.styledList{
-  list-style-type: none;
-  padding-left: 0;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.styledList li {
+
+.section-wrapper {
   position: relative;
-  margin-bottom: .25rem;
-  padding-left: 1.5rem;
-}
-.styledList li::before {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: 0;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 9999px;
-  background-color: #72e2ae;
-}
-
-input, textarea {
-  transition-property: color, background-color, border-color;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: .15s;
-}
-
-textarea:focus, input:focus {
-  outline: none;
-  border-color: #72e2ae;
-}
-
-/* ANIMATIONS */
-
-.animate-leftToRight {
-  animation: titleDeviderAnimation 3s ease-in-out infinite;
-}
-@keyframes titleDeviderAnimation {
-  0% {
-    transform: translateX(-6px);
-  }
-  to {
-    transform: translateX(128px);
-  }
-}
-
-.animate-ledgerLeftRight {
-  animation:ledgerLeftRight 3s ease-in-out infinite;
-}
-@keyframes ledgerLeftRight {
-  0% {
-   left:-40px
-  }
-  to {
-   left:100%
-  }
- }
-
-.animate-ledgerRightLeft {
-  animation:ledgerRightLeft 3s ease-in-out infinite;
-}
-@keyframes ledgerRightLeft {
-  0% {
-   right:-40px
-  }
-  to {
-   right:100%
-  }
- }
-
- .animate-ledgerBottomTop {
-  animation:ledgerBottomTop 3s ease-in-out infinite;
-}
-@keyframes ledgerBottomTop {
-  0% {
-   bottom:-40px
-  }
-  to {
-   bottom:100%
-  }
- }
- 
- .animate-ledgerTopBottom {
-  animation:ledgerTopBottom 3s ease-in-out infinite;
-}
-@keyframes ledgerTopBottom {
-  0% {
-   top:-40px
-  }
-  to {
-   top:100%
-  }
- }
-
- .lines {
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   margin: auto;
-   width: 100vw;
-   z-index: -10;
- }
-  
-.line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  max-width: 1150px;
+  margin: auto;
+  padding: 9.6rem;
   overflow: hidden;
 }
-.line:nth-child(1) {
-  margin-left: -10%
-}
-.line:nth-child(2) {
-  margin-left: -20%
-}
-.line:nth-child(3) {
-  margin-left: -30%
-}
-.line:nth-child(4) {
-  margin-left: -40%
-}
-.line:nth-child(5) {
-  margin-left: 0%
-}
-.line:nth-child(6) {
-  margin-left: 10%
-}
-.line:nth-child(7) {
-  margin-left: 20%
-}
-.line:nth-child(8) {
-  margin-left: 30%
-}
-.line:nth-child(9) {
-  margin-left: 40%
-}
 
-.line:nth-child(1)::after {
-    animation-delay: 1s;
-}
-.line:nth-child(2)::after {
-    animation-delay: 2s;
-}
-.line:nth-child(3)::after {
-  animation-delay: 2.5s
-}
-.line:nth-child(4)::after {
-  animation-delay: 1.5s
-}
-.line:nth-child(5)::after {
-  animation-delay: 0.5s
-}
-.line:nth-child(6)::after {
-  animation-delay: 2s
-}
-.line:nth-child(7)::after {
-  animation-delay: 2.5s
-}
-.line:nth-child(8)::after {
-  animation-delay: 1s
-}
-.line:nth-child(9)::after {
-  animation-delay: 1.5s
-}
-
-.line::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 15vh;
-  width: 100%;
-  top: -50%;
-  left: 0;
-  background: linear-gradient(to bottom, #ffffff, #72e2ae 75%, #72e2ae 100%);
-  animation: drop 7s 0s infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-  
-    
-@keyframes drop {
-  0% {
-    top: -50%
-
-  }
-  100% {
-    top: 110%
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 7.2rem 2.4rem;
   }
 }
 
+.chip {
+  font-size: var(--text-xs);
+  background: var(--background-light);
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+}
