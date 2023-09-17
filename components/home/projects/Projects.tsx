@@ -21,7 +21,7 @@ const projects = [
     title: "Monst",
     imgSrc: "project-imgs/monst-thumbnail.png",
     code: "https://github.com/Sh4ke96/monst",
-    projectLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    projectLink: "https://monst-eight.vercel.app",
     tech: ["Next.js", "TypeScript", "Tailwind", "Flowbite"],
     description:
       "A landing page with multiple pages, login, account creation capabilities designed for corporations.",
