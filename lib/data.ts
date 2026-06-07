@@ -49,10 +49,10 @@ export const quests: Quest[] = [
     period: "2024.01 — Present",
     location: "Remote",
     description: {
-      en: "Building fullstack products with Next.js, TypeScript, Node.js, PostgreSQL, Redis, Docker and Azure. Responsible for architecture decisions, API design, and frontend delivery.",
-      pl: "Budowanie aplikacji fullstack w Next.js, TypeScript, Node.js, PostgreSQL, Redis, Docker i Azure. Odpowiedzialny za decyzje architektoniczne, projektowanie API i dostarczanie frontendu.",
+      en: "Building fullstack products with Next.js, TypeScript, Laravel, PostgreSQL, Redis, Docker and Azure. Responsible for architecture decisions, API design, and frontend delivery.",
+      pl: "Budowanie aplikacji fullstack w Next.js, TypeScript, Laravel, PostgreSQL, Redis, Docker i Azure. Odpowiedzialny za decyzje architektoniczne, projektowanie API i dostarczanie frontendu.",
     },
-    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker", "Azure"],
+    tech: ["Next.js", "TypeScript", "Laravel", "PostgreSQL", "Redis", "Docker", "Azure"],
   },
   {
     company: "Konceptika",

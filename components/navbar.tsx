@@ -51,7 +51,7 @@ export function Navbar() {
           <ThemeToggle />
           <Link
             href="/cv"
-            className="flex h-9 items-center gap-2 border-2 border-accent bg-accent px-3 font-mono text-sm text-accent-foreground shadow-[4px_4px_0_0_var(--navy)] transition-transform hover:-translate-y-0.5"
+            className="flex h-9 items-center gap-2 border-2 border-accent bg-accent px-3 font-mono text-sm text-accent-foreground shadow-[4px_4px_0_0_var(--color-navy)] transition-transform hover:-translate-y-0.5"
           >
             <FileDown size={14} />
             {t.nav.cv}

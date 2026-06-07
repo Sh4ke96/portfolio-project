@@ -1,92 +1,78 @@
 @import "tailwindcss";
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* Brand palette */
-:root {
-  --teal: #0091b9;
-  --light-blue: #bae4f0;
-  --navy: #004e9b;
-  --orange: #ff6500;
-  --yellow: #ffd500;
+/* ─── Tailwind theme ────────────────────────────────────────────────────────
+   Using @theme (without inline) so utilities reference CSS custom properties
+   via var(). Overriding --color-* in .dark makes dark mode work dynamically.
+───────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Brand palette — never change between themes */
+  --color-teal: #0091b9;
+  --color-light-blue: #bae4f0;
+  --color-navy: #004e9b;
+  --color-orange: #ff6500;
+  --color-yellow: #ffd500;
 
-  --background: #f4f9fc;
-  --foreground: #0a2540;
-  --card: #ffffff;
-  --card-foreground: #0a2540;
-  --popover: #ffffff;
-  --popover-foreground: #0a2540;
-  --primary: #0091b9;
-  --primary-foreground: #ffffff;
-  --secondary: #004e9b;
-  --secondary-foreground: #ffffff;
-  --muted: #dceaf2;
-  --muted-foreground: #4a6b80;
-  --accent: #ff6500;
-  --accent-foreground: #ffffff;
-  --destructive: #d62828;
-  --border: #b9d6e4;
-  --input: #dceaf2;
-  --ring: #ff6500;
-  --radius: 0;
-}
+  /* Semantic tokens — light-mode defaults */
+  --color-background: #f4f9fc;
+  --color-foreground: #0a2540;
+  --color-card: #ffffff;
+  --color-card-foreground: #0a2540;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0a2540;
+  --color-primary: #0091b9;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #004e9b;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #dceaf2;
+  --color-muted-foreground: #4a6b80;
+  --color-accent: #ff6500;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #d62828;
+  --color-border: #b9d6e4;
+  --color-input: #dceaf2;
+  --color-ring: #ff6500;
 
-.dark {
-  --background: #0a0e14;
-  --foreground: #bae4f0;
-  --card: #111820;
-  --card-foreground: #bae4f0;
-  --popover: #111820;
-  --popover-foreground: #bae4f0;
-  --primary: #0091b9;
-  --primary-foreground: #0a0e14;
-  --secondary: #004e9b;
-  --secondary-foreground: #bae4f0;
-  --muted: #1a2332;
-  --muted-foreground: #8db3c7;
-  --accent: #ff6500;
-  --accent-foreground: #0a0e14;
-  --destructive: #ff4444;
-  --border: #1f3346;
-  --input: #1a2332;
-  --ring: #ffd500;
-}
-
-@theme inline {
-  --font-heading: var(--font-pixel), monospace;
+  /* Typography */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   --font-pixel: var(--font-pixel), monospace;
+  --font-heading: var(--font-pixel), monospace;
 
-  --color-teal: var(--teal);
-  --color-light-blue: var(--light-blue);
-  --color-navy: var(--navy);
-  --color-orange: var(--orange);
-  --color-yellow: var(--yellow);
-
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-
-  --radius-lg: var(--radius);
-  --radius-md: var(--radius);
-  --radius-sm: var(--radius);
+  /* Radius — zero = pixel art */
+  --radius-lg: 0;
+  --radius-md: 0;
+  --radius-sm: 0;
 }
 
+/* ─── Dark mode overrides ───────────────────────────────────────────────────
+   Must override the same --color-* names so Tailwind utility classes
+   (bg-background, text-foreground, etc.) pick up the new values at runtime.
+───────────────────────────────────────────────────────────────────────────── */
+.dark {
+  color-scheme: dark;
+
+  --color-background: #0a0e14;
+  --color-foreground: #bae4f0;
+  --color-card: #111820;
+  --color-card-foreground: #bae4f0;
+  --color-popover: #111820;
+  --color-popover-foreground: #bae4f0;
+  --color-primary: #0091b9;
+  --color-primary-foreground: #0a0e14;
+  --color-secondary: #004e9b;
+  --color-secondary-foreground: #bae4f0;
+  --color-muted: #1a2332;
+  --color-muted-foreground: #8db3c7;
+  --color-accent: #ff6500;
+  --color-accent-foreground: #0a0e14;
+  --color-destructive: #ff4444;
+  --color-border: #1f3346;
+  --color-input: #1a2332;
+  --color-ring: #ffd500;
+}
+
+/* ─── Base layer ─────────────────────────────────────────────────────────── */
 @layer base {
   * {
     @apply border-border;
@@ -94,6 +80,11 @@
 
   html {
     @apply scroll-smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
@@ -106,27 +97,27 @@
   }
 }
 
-/* Pixel utilities */
+/* ─── Pixel utilities ────────────────────────────────────────────────────── */
 .pixel-border {
   border: 4px solid;
-  border-image: linear-gradient(to bottom right, var(--teal), var(--navy)) 1;
+  border-image: linear-gradient(to bottom right, var(--color-teal), var(--color-navy)) 1;
   image-rendering: pixelated;
 }
 
 .pixel-box {
   box-shadow:
-    4px 0 0 0 var(--teal),
-    -4px 0 0 0 var(--teal),
-    0 4px 0 0 var(--teal),
-    0 -4px 0 0 var(--teal),
-    4px 4px 0 0 var(--navy),
-    -4px -4px 0 0 var(--light-blue);
+    4px 0 0 0 var(--color-teal),
+    -4px 0 0 0 var(--color-teal),
+    0 4px 0 0 var(--color-teal),
+    0 -4px 0 0 var(--color-teal),
+    4px 4px 0 0 var(--color-navy),
+    -4px -4px 0 0 var(--color-light-blue);
 }
 
 .pixel-glow {
   box-shadow:
-    0 0 10px var(--teal),
-    0 0 20px var(--teal),
+    0 0 10px var(--color-teal),
+    0 0 20px var(--color-teal),
     inset 0 0 5px rgba(0, 145, 185, 0.3);
 }
 
@@ -154,20 +145,14 @@
   -webkit-font-smoothing: none;
 }
 
-/* Animations */
+/* ─── Keyframe animations ────────────────────────────────────────────────── */
 @keyframes avatar-bob {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-1deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(1deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50%       { transform: translateY(-8px) rotate(1deg); }
 }
 
 @keyframes avatar-ring {
-  0%,
-  100% {
+  0%, 100% {
     box-shadow:
       0 0 0 0 rgba(0, 145, 185, 0.5),
       0 0 16px 2px rgba(255, 101, 0, 0.25);
@@ -180,62 +165,31 @@
 }
 
 @keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50%       { opacity: 1; transform: scale(1); }
 }
 
 @keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
+  0%, 50%    { opacity: 1; }
+  51%, 100%  { opacity: 0; }
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
 }
 
-.animate-avatar-bob {
-  animation: avatar-bob 4s ease-in-out infinite;
-}
+.animate-avatar-bob  { animation: avatar-bob  4s   ease-in-out infinite; }
+.animate-avatar-ring { animation: avatar-ring  2.4s ease-in-out infinite; }
+.animate-twinkle     { animation: twinkle      2s   ease-in-out infinite; }
+.cursor-blink        { animation: blink        1s   infinite; }
+.animate-float       { animation: float        3s   ease-in-out infinite; }
 
-.animate-avatar-ring {
-  animation: avatar-ring 2.4s ease-in-out infinite;
-}
-
-.animate-twinkle {
-  animation: twinkle 2s ease-in-out infinite;
-}
-
-.cursor-blink {
-  animation: blink 1s infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
+/* ─── Layout utilities ───────────────────────────────────────────────────── */
 @utility section-wrapper {
   @apply relative z-10 mx-auto w-full max-w-[1600px] px-5 py-16 sm:px-8 lg:px-10 2xl:px-12;
 }
 
 @utility pixel-card {
-  @apply border-2 border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[4px_4px_0_0_var(--accent)];
+  @apply border-2 border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[4px_4px_0_0_var(--color-accent)];
 }

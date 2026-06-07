@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Printer, ArrowLeft, Mail, Linkedin, Github } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { quests } from "@/lib/data";
+import { LanguageToggle } from "@/components/language-toggle";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const CV_SKILLS = [
   "React", "Next.js", "TypeScript", "JavaScript",
@@ -22,31 +24,39 @@ export default function CvPage() {
   const { t, lang } = useLanguage();
 
   return (
-    <div className="cv-print-area min-h-screen bg-[#f4f9fc] text-[#0a2540]">
-      <div className="cv-no-print border-b-2 border-[#b9d6e4] bg-white px-4 py-4">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between">
+    <div className="cv-print-area min-h-screen bg-background text-foreground">
+
+      {/* ── Toolbar (hidden on print) ─────────────────────────────────── */}
+      <div className="cv-no-print border-b-2 border-border bg-card px-4 py-3">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-3">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-mono text-sm text-[#0091b9] hover:underline"
+            className="inline-flex items-center gap-2 font-mono text-sm text-primary hover:underline"
           >
             <ArrowLeft size={16} />
             Portfolio
           </Link>
-          <button
-            type="button"
-            onClick={() => window.print()}
-            className="inline-flex items-center gap-2 border-2 border-[#ff6500] bg-[#ff6500] px-4 py-2 font-mono text-sm text-white"
-          >
-            <Printer size={16} />
-            {t.cv.print}
-          </button>
+
+          <div className="flex items-center gap-2">
+            <LanguageToggle />
+            <ThemeToggle />
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="inline-flex items-center gap-2 border-2 border-accent bg-accent px-4 py-2 font-mono text-sm text-accent-foreground transition-transform hover:-translate-y-0.5"
+            >
+              <Printer size={16} />
+              {t.cv.print}
+            </button>
+          </div>
         </div>
       </div>
 
+      {/* ── CV sheet ─────────────────────────────────────────────────── */}
       <div className="mx-auto max-w-[1600px] p-4 print:p-0">
-        <div className="cv-sheet mx-auto flex overflow-hidden border-2 border-[#b9d6e4] bg-white shadow-lg print:shadow-none">
+        <div className="cv-sheet mx-auto flex overflow-hidden border-2 border-border bg-card shadow-lg print:shadow-none">
 
-          {/* Sidebar */}
+          {/* Sidebar — intentionally dark navy in all modes */}
           <aside className="cv-block w-[72mm] shrink-0 bg-[#0a2540] p-6 text-[#bae4f0]">
             <div className="mb-6 flex justify-center">
               <Image
@@ -138,39 +148,40 @@ export default function CvPage() {
             </section>
           </aside>
 
-          {/* Main */}
-          <main className="flex-1 p-8">
+          {/* Main content */}
+          <main className="flex-1 bg-card p-8 text-foreground">
+
             <section className="cv-block mb-8">
-              <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-[#0091b9]">
+              <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">
                 {t.cv.profile}
               </h2>
-              <p className="text-sm leading-relaxed text-[#4a6b80]">
+              <p className="text-sm leading-relaxed text-muted-foreground">
                 {t.cv.profileText}
               </p>
             </section>
 
             <section className="cv-block mb-8">
-              <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-[#0091b9]">
+              <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">
                 {t.cv.experience}
               </h2>
               <div className="space-y-6">
                 {quests.map((job) => (
                   <div key={`${job.company}-${job.period}`}>
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="font-bold">{job.company}</h3>
-                      <span className="text-xs text-[#4a6b80]">{job.period}</span>
+                      <h3 className="font-bold text-foreground">{job.company}</h3>
+                      <span className="text-xs text-muted-foreground">{job.period}</span>
                     </div>
-                    <p className="mb-1 text-sm font-medium text-[#004e9b]">
+                    <p className="mb-1 text-sm font-medium text-secondary">
                       {job.role} · {job.location}
                     </p>
-                    <p className="mb-1 text-sm leading-relaxed text-[#4a6b80]">
+                    <p className="mb-1 text-sm leading-relaxed text-muted-foreground">
                       {job.description[lang]}
                     </p>
                     <div className="flex flex-wrap gap-1.5">
                       {job.tech.map((tech) => (
                         <span
                           key={tech}
-                          className="border border-[#b9d6e4] px-1.5 py-0.5 text-[10px] text-[#4a6b80]"
+                          className="border border-border px-1.5 py-0.5 text-[10px] text-muted-foreground"
                         >
                           {tech}
                         </span>
@@ -182,17 +193,17 @@ export default function CvPage() {
             </section>
 
             <section className="cv-block mb-8">
-              <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-[#0091b9]">
+              <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">
                 {t.cv.education}
               </h2>
-              <p className="text-sm text-[#4a6b80]">{t.cv.educationText}</p>
+              <p className="text-sm text-muted-foreground">{t.cv.educationText}</p>
             </section>
 
-            <section className="cv-block mt-auto border-t border-[#b9d6e4] pt-4">
-              <h2 className="mb-1 text-[10px] font-bold uppercase tracking-wider text-[#8db3c7]">
+            <section className="cv-block mt-auto border-t border-border pt-4">
+              <h2 className="mb-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
                 {t.cv.gdprTitle}
               </h2>
-              <p className="text-[9px] leading-relaxed text-[#8db3c7]">
+              <p className="text-[9px] leading-relaxed text-muted-foreground">
                 {t.cv.gdprText}
               </p>
             </section>

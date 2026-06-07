@@ -17,7 +17,7 @@ const GROUP_ICONS = {
 
 function TechTile({ item }: { item: TechItem }) {
   return (
-    <div className="flex flex-col items-center gap-2 border-2 border-border bg-card p-4 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[4px_4px_0_0_var(--accent)]">
+    <div className="flex flex-col items-center gap-2 border-2 border-border bg-card p-4 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[4px_4px_0_0_var(--color-accent)]">
       <div className="relative h-10 w-10">
         <Image
           src={item.icon}

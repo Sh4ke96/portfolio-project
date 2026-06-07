@@ -9,6 +9,24 @@
     margin: 0;
   }
 
+  /* Force light color-scheme so browser renders backgrounds as light */
+  html,
+  body {
+    color-scheme: light !important;
+  }
+
+  /* Reset dark-mode tokens back to light values for print */
+  html.dark,
+  html.dark * {
+    --color-background: #f4f9fc !important;
+    --color-foreground: #0a2540 !important;
+    --color-card: #ffffff !important;
+    --color-card-foreground: #0a2540 !important;
+    --color-border: #b9d6e4 !important;
+    --color-muted: #dceaf2 !important;
+    --color-muted-foreground: #4a6b80 !important;
+  }
+
   body * {
     visibility: hidden;
   }
