@@ -1,0 +1,45 @@
+.cv-sheet {
+  width: 210mm;
+  min-height: 297mm;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .cv-print-area,
+  .cv-print-area * {
+    visibility: visible;
+  }
+
+  .cv-print-area {
+    position: absolute;
+    inset: 0;
+  }
+
+  .cv-no-print {
+    display: none !important;
+  }
+
+  .cv-sheet {
+    width: 100%;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .cv-print-area * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
