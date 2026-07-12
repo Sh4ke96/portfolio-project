@@ -10,7 +10,9 @@ export type Quest = {
 export type Project = {
   slug: string;
   title: string;
-  description: { en: string; pl: string };
+  description: LangStr;
+  longDescription?: LangStr;
+  modules?: string[];
   tech: string[];
   code: string;
   live: string;
@@ -83,13 +85,24 @@ export const projects: Project[] = [
     slug: "nimbusly",
     title: "Nimbusly",
     description: {
-      en: "Home management app — shared shopping lists, birthday tracking, and household budget in one place.",
-      pl: "Aplikacja do zarządzania domem — wspólne listy zakupów, śledzenie urodzin i budżet domowy w jednym miejscu.",
+      en: "Family hub app — shared budget, shopping, gifts, birthdays, chores, watchlist, notes and more. Available in Polish and English.",
+      pl: "Aplikacja hub dla rodziny — wspólny budżet, zakupy, prezenty, urodziny, obowiązki, watchlista, notatki i więcej. Dostępna po polsku i angielsku.",
     },
-    tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind", "Zustand"],
+    longDescription: {
+      en: "Nimbusly brings every corner of home life into one place. Each family member has their own profile while all family data stays in sync in real time. Features: shared budgets with income/expense tracking, recurring entries and payment reminders; live-updating shopping lists with mobile full-screen detail view; gift ideas without spoiling surprises; birthday calendar with weekly mobile view; shared work/family schedule; unified family calendar (birthdays, chores, schedule); home pharmacy with expiry tracking; movies & series watchlist; restaurant wishlist with ratings; pet profiles and care schedules; household chores with assignees and recurrence; rich Markdown notes with pinning and attachments. PWA with offline support and Web Push (iOS 16.4+ / Android), global search (Ctrl+K), in-app notification feed, guided tours via the Nimbus AI companion, and a public change log.",
+      pl: "Nimbusly łączy wszystkie obszary życia domowego w jednym miejscu. Każdy członek rodziny ma własny profil, dane synchronizują się w czasie rzeczywistym. Funkcje: wspólny budżet z przychodami, wydatkami, wpisami cyklicznymi i przypomnieniami o płatnościach; listy zakupów z podglądem live; pomysły na prezenty bez spoilerów; kalendarz urodzin z widokiem tygodniowym; wspólny harmonogram pracy/rodziny; zunifikowany kalendarz rodzinny; domowa apteczka z datami ważności; watchlista filmów i seriali; lista restauracji z ocenami; profile zwierząt; obowiązki domowe z przypisaniem i cyklicznością; notatki Markdown z pinowaniem i załącznikami. PWA z trybem offline i Web Push, globalne wyszukiwanie (Ctrl+K), feed powiadomień, przewodniki Nimbus i publiczny changelog.",
+    },
+    modules: [
+      "Budget", "Shopping lists", "Gifts", "Birthdays", "Schedule",
+      "Family calendar", "Medicine cabinet", "Watchlist", "Restaurants",
+      "Pets", "Chores", "Notes", "Family management", "Dashboard",
+      "Global search", "Web Push (PWA)", "Nimbus companion", "Change log",
+    ],
+    tech: ["Next.js", "React 19", "TypeScript", "Tailwind v4", "Supabase", "PostgreSQL", "Zustand", "Recharts", "Cypress", "driver.js", "Vercel"],
     code: "https://github.com/Sh4ke96/nimbusly",
-    live: "#",
-    status: "wip",
+    live: "https://www.nimbusly.pl",
+    featured: true,
+    status: "live",
     image: "/project-imgs/nimbusly-thumbnail.png",
   },
   {
@@ -160,6 +173,114 @@ export const techStack: Record<string, TechItem[]> = {
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "building-nimbusly",
+    title: {
+      en: "Building Nimbusly: a family hub that actually ships",
+      pl: "Budowa Nimbusly: rodzinny hub, który naprawdę działa",
+    },
+    excerpt: {
+      en: "From a shopping list side project to a live PWA with 14+ modules, real-time sync, Web Push, and an in-app AI companion called Nimbus.",
+      pl: "Od pobocznego projektu z listą zakupów do działającej PWA z 14+ modułami, synchronizacją na żywo, Web Push i asystentem Nimbus w aplikacji.",
+    },
+    date: "2026-07-12",
+    readTime: "7 min",
+    heroImage: "/project-imgs/nimbusly-thumbnail.png",
+    sections: [
+      {
+        paragraphs: [
+          {
+            en: "Nimbusly started as a simple idea: my family kept losing track of shopping lists, birthdays, and who was supposed to do what around the house. Notes lived in three different apps, the budget was a spreadsheet nobody updated, and every birthday reminder came too late. I wanted one place where all of that lived — shared, synced, and actually used by everyone at home.",
+            pl: "Nimbusly zaczęło się od prostego problemu: rodzina gubiła listy zakupów, urodziny i to, kto miał co zrobić w domu. Notatki siedziały w trzech różnych aplikacjach, budżet był w arkuszu, którego nikt nie aktualizował, a przypomnienia o urodzinach przychodziły za późno. Chciałem jedno miejsce — wspólne, zsynchronizowane i naprawdę używane przez wszystkich.",
+          },
+          {
+            en: "What began as a shopping list experiment grew into a full family hub. Today Nimbusly is live at www.nimbusly.pl (v0.11.4), available in Polish and English, and it covers far more than groceries.",
+            pl: "To, co zaczęło się od eksperymentu z listą zakupów, przerodziło się w pełny hub rodzinny. Dziś Nimbusly działa na www.nimbusly.pl (v0.11.4), jest dostępne po polsku i angielsku i obejmuje znacznie więcej niż zakupy.",
+          },
+        ],
+      },
+      {
+        heading: {
+          en: "What it does",
+          pl: "Co potrafi",
+        },
+        paragraphs: [
+          {
+            en: "The app bundles 14 modules into one dashboard: shared budget with recurring entries and payment reminders, live-updating shopping lists, gift ideas without spoiling surprises, birthday calendar, work/family schedule, unified family calendar, home pharmacy with expiry tracking, movies & series watchlist, restaurant wishlist, pet profiles, household chores with assignees, Markdown notes with attachments, and family account management with roles (founder, admin, member).",
+            pl: "Aplikacja łączy 14 modułów w jednym dashboardzie: wspólny budżet z wpisami cyklicznymi i przypomnieniami o płatnościach, listy zakupów z podglądem live, pomysły na prezenty bez spoilerów, kalendarz urodzin, harmonogram pracy/rodziny, zunifikowany kalendarz rodzinny, domowa apteczka z datami ważności, watchlista filmów i seriali, lista restauracji, profile zwierząt, obowiązki domowe z przypisaniem, notatki Markdown z załącznikami oraz zarządzanie kontem rodzinnym z rolami (founder, admin, member).",
+          },
+          {
+            en: "Each family member has their own profile. Data syncs in real time — when someone adds milk to the shopping list on their phone, it shows up on everyone else's screen within seconds. Solo mode works too, for people who just want the tools without inviting anyone.",
+            pl: "Każdy członek rodziny ma własny profil. Dane synchronizują się w czasie rzeczywistym — gdy ktoś doda mleko do listy zakupów na telefonie, u pozostałych pojawi się to w ciągu sekund. Działa też tryb solo, dla osób, które chcą korzystać z narzędzi bez zapraszania nikogo.",
+          },
+        ],
+      },
+      {
+        heading: {
+          en: "Mobile-first and installable",
+          pl: "Mobile-first i instalowalna",
+        },
+        paragraphs: [
+          {
+            en: "Most family interactions happen on a phone, so the layout is mobile-first: bottom navigation, larger touch targets, safe-area insets, and dedicated mobile flows for shopping lists (full-screen detail sheet) and birthdays (accordion + weekly calendar view). On desktop you get a sidebar and a module grid.",
+            pl: "Większość interakcji rodzinnych dzieje się na telefonie, więc layout jest mobile-first: dolna nawigacja, większe obszary dotykowe, safe-area insets i dedykowane flow mobilne dla list zakupów (pełnoekranowy widok) oraz urodzin (akordeon + widok tygodniowy). Na desktopie jest sidebar i siatka modułów.",
+          },
+          {
+            en: "Nimbusly is a PWA — web manifest, service worker, offline fallback, install prompt, and Web Push notifications (iOS 16.4+ / Android). Push covers family activity and budget payment reminders. On iOS you need to add the app to your home screen first; browser tabs don't get push.",
+            pl: "Nimbusly to PWA — manifest, service worker, tryb offline, prompt instalacji i powiadomienia Web Push (iOS 16.4+ / Android). Push obejmuje aktywność rodziny i przypomnienia o płatnościach w budżecie. Na iOS trzeba najpierw dodać aplikację na ekran główny — w karcie przeglądarki push nie działa.",
+          },
+        ],
+      },
+      {
+        heading: {
+          en: "Meet Nimbus — the in-app companion",
+          pl: "Poznaj Nimbusa — asystenta w aplikacji",
+        },
+        paragraphs: [
+          {
+            en: "One thing I'm particularly proud of is Nimbus — a small companion widget in the bottom-right corner. It runs guided tours (driver.js) for the app and every module, shows contextual hints, answers FAQ questions, suggests cross-module actions, celebrates milestones, and has a quiet mode. You can resume tours with Esc, navigate with keyboard shortcuts, and it surfaces a \"needs attention\" banner when something requires action.",
+            pl: "Jestem szczególnie dumny z Nimbusa — małego asystenta w prawym dolnym rogu. Prowadzi przewodniki (driver.js) po aplikacji i każdym module, pokazuje kontekstowe podpowiedzi, odpowiada na FAQ, sugeruje akcje między modułami, świętuje kamienie milowe i ma tryb cichy. Można wznowić tour klawiszem Esc, nawigować skrótami klawiszowymi, a gdy coś wymaga uwagi — pojawia się banner „wymaga uwagi”.",
+          },
+          {
+            en: "Building Nimbus meant maintaining a tour catalog, bilingual copy for every step, context hints per route, FAQ entries, and celebration hooks — all kept in sync whenever a module changes. It's a lot of metadata, but it makes the app feel approachable for non-technical family members.",
+            pl: "Zbudowanie Nimbusa wymagało utrzymania katalogu tourów, dwujęzycznych tekstów dla każdego kroku, podpowiedzi kontekstowych per route, wpisów FAQ i hooków celebracji — wszystko zsynchronizowane przy każdej zmianie modułu. To sporo metadanych, ale sprawia, że aplikacja jest przystępna dla nietechnicznych członków rodziny.",
+          },
+        ],
+      },
+      {
+        heading: {
+          en: "Tech stack and architecture",
+          pl: "Stack technologiczny i architektura",
+        },
+        paragraphs: [
+          {
+            en: "Nimbusly runs on Next.js 16, React 19, and TypeScript. Styling is Tailwind CSS v4 with shadcn/ui and Radix UI primitives. Supabase handles auth, PostgreSQL with Row Level Security, and real-time subscriptions. Client state lives in Zustand; mutations go through Server Actions. Charts use Recharts, E2E tests use Cypress, unit tests use the Node test runner.",
+            pl: "Nimbusly działa na Next.js 16, React 19 i TypeScript. Stylowanie to Tailwind CSS v4 z shadcn/ui i prymitywami Radix UI. Supabase obsługuje auth, PostgreSQL z Row Level Security i subskrypcje real-time. Stan klienta jest w Zustandzie, mutacje idą przez Server Actions. Wykresy to Recharts, testy E2E — Cypress, testy jednostkowe — Node test runner.",
+          },
+          {
+            en: "The project has a strict release process: every user-visible change gets a changelog entry (PL + EN), a version bump, README update, and tests. Cron jobs handle weekly digests, budget payment reminders, and family activity digests via Resend email. Vercel Analytics and Speed Insights track production performance.",
+            pl: "Projekt ma rygorystyczny proces release'ów: każda widoczna zmiana dostaje wpis w changelogu (PL + EN), bump wersji, aktualizację README i testy. Cron joby obsługują cotygodniowe podsumowania, przypomnienia o płatnościach w budżecie i digest aktywności rodziny przez Resend. Vercel Analytics i Speed Insights śledzą wydajność na produkcji.",
+          },
+        ],
+      },
+      {
+        heading: {
+          en: "What I learned",
+          pl: "Czego się nauczyłem",
+        },
+        paragraphs: [
+          {
+            en: "Shipping a family app taught me that real-time sync is easy to build but hard to get right UX-wise — optimistic updates, conflict handling, and \"who changed this?\" context matter more than the WebSocket plumbing. RLS in Supabase is powerful but requires discipline: every new table needs policies before it goes to production.",
+            pl: "Wypuszczenie aplikacji rodzinnej nauczyło mnie, że synchronizacja real-time jest łatwa do zbudowania, ale trudna w UX — optymistyczne aktualizacje, obsługa konfliktów i kontekst „kto to zmienił?” liczą się bardziej niż sam WebSocket. RLS w Supabase jest potężny, ale wymaga dyscypliny: każda nowa tabela potrzebuje polityk zanim trafi na produkcję.",
+          },
+          {
+            en: "The biggest win was building for my own family first. Every module exists because we actually needed it — not because it looked good on a feature list. If you're thinking about a side project, start with a problem you live with daily. Nimbusly is that project for me, and it's live at www.nimbusly.pl if you want to take a look.",
+            pl: "Największym sukcesem było budowanie najpierw dla własnej rodziny. Każdy moduł istnieje, bo naprawdę go potrzebowaliśmy — nie dlatego, że dobrze wyglądał na liście funkcji. Jeśli myślisz o side projekcie, zacznij od problemu, z którym żyjesz codziennie. Nimbusly to taki projekt dla mnie — działa na www.nimbusly.pl, jeśli chcesz zajrzeć.",
+          },
+        ],
+      },
+    ],
+  },
   {
     slug: "pixel-portfolio-redesign",
     title: {

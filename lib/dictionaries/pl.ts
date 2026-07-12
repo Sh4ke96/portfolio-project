@@ -51,7 +51,9 @@ export const pl: Dictionary = {
     featured: "POLECANE",
     learnMore: "Więcej",
     viewCode: "Kod",
-    viewLive: "Live",
+    viewLive: "Demo live",
+    modules: "Moduły",
+    close: "Zamknij",
     status: {
       live: "LIVE",
       wip: "WIP",

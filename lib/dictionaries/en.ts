@@ -49,7 +49,9 @@ export const en = {
     featured: "FEATURED",
     learnMore: "Learn more",
     viewCode: "Source",
-    viewLive: "Live",
+    viewLive: "Live demo",
+    modules: "Modules",
+    close: "Close",
     status: {
       live: "LIVE",
       wip: "WIP",
